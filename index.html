@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App de Reciclaje</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>App de Reciclaje</h1>
+  </header>
+
+  <nav class="nav-fixed">
+    <ul>
+      <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+      <li><a href="#" onclick="mostrarSeccion('guia')">Guía</a></li>
+      <li><a href="#" onclick="mostrarSeccion('ubicacion')">Ubicación</a></li>
+      <li><a href="#" onclick="mostrarSeccion('ahorro')">Ahorro</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="inicio" class="seccion">
+        <h2>Inicio</h2>
+        <p id="saludo">¡Hola, Usuario!</p>
+        <img src="https://i.postimg.cc/zBXv996L/Reciclaje.jpg" alt="Reciclaje">
+        <p>El reciclaje reduce la contaminación, ahorra energía y preserva los recursos naturales. Es esencial para un futuro sostenible.</p>
+      </section>
+      
+      <section id="guia" class="seccion hidden">
+        <h2>Guía y Tutoriales</h2>
+        <p>Aprende a clasificar tus residuos correctamente:</p>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cvakvfXj0KE?si=gjg8LV6AfU2UzFWx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+        <div class="contenedor-botes">
+          <div class="contenedor">
+            <img src="https://i.postimg.cc/yxg5x8tw/Captura-de-pantalla-2024-09-14-194137.png" alt="Contenedor Verde">
+            <p>Contenedor Verde - Vidrio</p>
+            <p>Contaminación: 1 tonelada de vidrio reciclado ahorra 1.2 toneladas de arena.</p>
+          </div>
+          <div class="contenedor">
+            <img src="https://i.postimg.cc/vBHwYMQs/Captura-de-pantalla-2024-09-14-194128.png" alt="Contenedor Azul">
+            <p>Contenedor Azul - Papel y Cartón</p>
+            <p>Contaminación: La producción de papel nuevo genera 3 veces más contaminación que el reciclaje.</p>
+          </div>
+          <div class="contenedor">
+            <img src="https://i.postimg.cc/SsqNcwkT/Captura-de-pantalla-2024-09-14-194205.png" alt="Contenedor Amarillo">
+            <p>Contenedor Amarillo - Plástico</p>
+            <p>Contaminación: Reciclar plástico reduce la contaminación en un 90% comparado con la producción nueva.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section id="ubicacion" class="seccion hidden">
+        <h2>Ubicación de Puntos de Reciclaje</h2>
+        <div class="etiqueta">
+          <div class="horario">Funciona: Lunes a Viernes, 8:00 am a 12:00 am y 2:00 pm a 6:00 pm</div>
+          <span>Oikos Green Pereira</span>
+        </div>
+        <div class="etiqueta">
+          <div class="horario">Funciona: Lunes a Sábado, 7:30 am a 5:00 pm</div>
+          <span>Recuperadora Ramirez Nieva</span>
+        </div>
+        <div class="etiqueta">
+          <div class="horario">Funciona: Lunes a Sábado, 7:00 am a 6:00 pm</div>
+          <span>Reciclajes Gallito</span>
+        </div>
+      </section>
+      
+      <section id="ahorro" class="seccion hidden">
+        <h2>Calculadora de Ahorro</h2>
+        <input type="number" id="cantidad" placeholder="Cantidad en kg">
+        <select id="material">
+          <option value="papel">Papel</option>
+          <option value="carton">Cartón</option>
+          <option value="plastico">Plástico</option>
+        </select>
+        <button onclick="calcularAhorro()">Calcular Ahorro</button>
+        <div id="resultados"></div>
+      </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 App de Reciclaje</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
